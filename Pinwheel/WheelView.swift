@@ -20,6 +20,7 @@ struct WheelView: View {
                     .rotationEffect(.init(degrees: Double(entry.offset * (360 / Self.colors.count))))
             }
         }
+        .drawingGroup(opaque: true, colorMode: .extendedLinear)
         .mask(Circle().frame(width: radius*2, height: radius*2))
     }
 }
